@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <title>Asterisk</title>
+</head>
+<body>
+<form method="post">
+    <label for="pattern">Set pattern:</label>
+    <input type="text" name="pattern" value={{ pattern }} /><br />
+    <label for="word">Write word to check:</label>
+    <input type="text" name="word" value={{ word }} /><br />
+    <input type="submit" value={{ result }} /> <br />
+</form>
+</body>
+</html>
