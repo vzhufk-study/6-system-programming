@@ -3,15 +3,11 @@
 <head>
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
     <meta charset="UTF-8">
-    <title>Asterisk</title>
+    <title>Asterisk meta symbol checker</title>
 </head>
 <body>
-<form method="post">
-    <label for="pattern">Set pattern:</label>
-    <input type="text" name="pattern" value={{ pattern }} /><br />
-    <label for="word">Write word to check:</label>
-    <input type="text" name="word" value={{ word }} /><br />
-    <input type="submit" value={{ result }} /> <br />
-</form>
+    <div class="title"><h1>Asterisk meta symbol checker</h1></div>
+    <code><a href="/single">Single check</a></code>
+    <code><a href="/upload">File check</a></code>
 </body>
 </html>

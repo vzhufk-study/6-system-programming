@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <title>Upload words from file</title>
+</head>
+<html>
+   <body>
+
+<a href="/"><div class="title"><h1>Home</h1></div></a>
+
+      <form action = "http://localhost:5000/uploader" method = "POST"
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit" value="Upload"/>
+      </form>
+
+      <form action = "http://localhost:5000/downloader" method = "POST"
+         enctype = "multipart/form-data">
+          Pattern:
+          <code>{{ pattern }}</code>
+          Input text
+          <code>{{ text }}</code>
+          Result:
+          <code>{{ result }}</code>
+          Sorted by length result:
+          <code>{{ result_sort }}</code>
+         <input type = "submit" value="Download"/>
+      </form>
+
+   </body>
+</html>
+</html>
