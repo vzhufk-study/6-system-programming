@@ -11,7 +11,7 @@ import star
 
 app = Flask(__name__)
 # Set default static file storage
-app.config['UPLOAD_FOLDER'] = join(dirname(realpath(__file__)), 'static/..')
+app.config['UPLOAD_FOLDER'] = join(dirname(realpath(__file__)), 'static')
 
 
 @app.route('/')
@@ -22,6 +22,7 @@ def index():
 
 asterisk = star.AsteriskPattern("*")
 file = None
+
 
 @app.route('/single', methods=['POST', 'GET'])
 def single():

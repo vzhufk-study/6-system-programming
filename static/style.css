@@ -16,6 +16,10 @@ a {
     font-weight: normal;
 }
 
+a .title{
+    text-decoration: none;
+}
+
 .title {
     padding: 0 20px;
     background: #32373a;
