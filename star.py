@@ -53,7 +53,7 @@ class AsteriskPattern:
         file.close()
 
         self.result = []
-        self.result.append(result)
+        self.result.append(result.copy())
         result.sort(key=len, reverse=False)
         self.result.append(result)
         # Open same file

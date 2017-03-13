@@ -54,13 +54,14 @@ def download():
         return redirect(url_for('upload'))
 
 
+# TODO Front and split it to one lab.
+
 @app.route('/uploader', methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
         f = request.files['file']
         filename = secure_filename(f.filename)
         f.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-
         global asterisk
         asterisk.file(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         pattern = asterisk.pattern
